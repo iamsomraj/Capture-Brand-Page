@@ -1,8 +1,9 @@
 import Home from "../img/home1.png";
+import styled from "styled-components";
 
 const AboutSection: React.FC = () => {
   return (
-    <div>
+    <StyledAbout>
       <div className="description">
         <div className="title">
           <div className="hide">
@@ -26,8 +27,18 @@ const AboutSection: React.FC = () => {
       <div className="image">
         <img src={Home} alt="Guy with a camera" />
       </div>
-    </div>
+    </StyledAbout>
   );
 };
+
+// Styled Components
+const StyledAbout = styled.div`
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+  color: #fff;
+`;
 
 export default AboutSection;
